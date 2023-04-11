@@ -1,4 +1,4 @@
-const weekday = ["Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu"];
+const nameDay = ["Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu"];
 let startDate = new Date("2023-04-12"); // example
 let endDate = new Date("2023-05-12"); // example
 let totalWeekDay = 0;
@@ -16,14 +16,13 @@ console.log(`End Date: ${endDate}`);
 console.log(`Total Day: ${totalDay}\n`);
 
 for (i=0; i<totalDay; i++) {
-    startDate.setDate(startDate.getDate() + i)
-    if (startDate.getDay() === 0 || startDate.getDay() === 6) {
-        startDate.setDate(startDate.getDate() - i)
+    var temp = new Date(startDate);
+    temp.setDate(temp.getDate() + i);
+    if (temp.getDay() === 0 || temp.getDay() === 6) {
         totalWeekEnd += 1;
         continue;
     }
-    console.log(weekday[startDate.getDay()])
-    startDate.setDate(startDate.getDate() - i)
+    console.log(nameDay[temp.getDay()]);
     totalWeekDay += 1;
 }
 
