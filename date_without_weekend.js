@@ -9,7 +9,7 @@ const getTotalDay = (startDate, endDate) => {
     let totalDay = Math.ceil(selisih / (1000*3600*24));
     return totalDay;
 }
-totalDay = getTotalDay(startDate, endDate) + 1;
+let totalDay = getTotalDay(startDate, endDate) + 1;
 
 console.log(`Start Date: ${startDate}`);
 console.log(`End Date: ${endDate}`);
