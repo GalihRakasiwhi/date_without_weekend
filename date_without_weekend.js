@@ -16,7 +16,7 @@ console.log(`End Date: ${endDate}`);
 console.log(`Total Day: ${totalDay}\n`);
 
 for (i=0; i<totalDay; i++) {
-    var temp = new Date(startDate);
+    const temp = new Date(startDate);
     temp.setDate(temp.getDate() + i);
     if (temp.getDay() === 0 || temp.getDay() === 6) {
         totalWeekEnd += 1;
